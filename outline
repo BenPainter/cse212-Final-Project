@@ -2,22 +2,24 @@
 ## I. Welcome
 * Introduction
 * Contact Information
-## II. Conditionals
+## II. Stacks
 * Introduction
-* Boolean Expressions
-* Multiple Conditions
+* How to Use
 * Example
+* Efficiency
+* Efficiency Chart
 * Problem to Solve
-## III. Loops
+## III. Sets
 * Introduction
-* For Loops (Iterators)
-* Using Range with For Loops
-* While Loops
+* How to Use
 * Example
+* Efficiency
+* Efficiency Chart
 * Problem to Solve
-## IV. Functions
+## IV. Trees
 * Introduction
-* Structure of a Python Function
-* Organizing Functions
+* How to Use
 * Example
+* Efficiency
+* Efficiency Chart
 * Problem to Solve
