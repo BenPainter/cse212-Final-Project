@@ -28,6 +28,8 @@ def load_dart(num_of_darts):
             magazine.append(dart_answer)
         else:
             print("Sorry, but that isn't a valid number")
+
+            
 def fire_dart():
     if (num_of_darts == 0):
         print("\nYour magazine is empty!")
