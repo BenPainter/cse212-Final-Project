@@ -24,8 +24,10 @@ def load_dart(num_of_darts):
         print("3 - Suction Cup")
         print("4 - Flat Head")
         dart_answer = int(input("> "))
-        magazine.append(dart_answer)
-
+        if(dart_answer , 4 and dart_answer > 1):
+            magazine.append(dart_answer)
+        else:
+            print("Sorry, but that isn't a valid number")
 def fire_dart():
     if (num_of_darts == 0):
         print("\nYour magazine is empty!")
