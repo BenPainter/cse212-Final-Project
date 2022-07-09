@@ -8,22 +8,22 @@ A stack is a simple data structure that has the unique attribute of only allowin
         
 In Python, there are no built-in Stacks, so we will be using an array to accomplish the same effect. For stacks, there are 4 main commands/functions that you can use, those being; Push, Pop, Size, and Empty. 
 
-Push - The Push command allows the user to add an additional element to the stack. It’s like adding an additional piece of paper to a pill of papers. In Python, the push command would look something like this.
+Push - The push command allows the user to add an additional element to the stack. It’s like adding an additional piece of paper to a pill of papers. In Python, the push command would look something like this.
 ``` python
 stack.append(element)
 ```
 
-Pop - The Pop command allows the user to access the last element in the stack. This can be thought as taking the top sheet of paper from off the file. In Python, the pop command looks like this. Note that the pop command will also remove the element from the stack.
+Pop - The pop command allows the user to access the last element in the stack. This can be thought as taking the top sheet of paper from off the file. In Python, the pop command looks like this. Note that the pop command will also remove the element from the stack.
 ``` python
 stack.pop()
 ```
 
-Size -  The Size command returns the total number of elements that are in the stack. The way you would achieve this in Python is by using the length command.
+Size -  The size command returns the total number of elements that are in the stack. The way you would achieve this in Python is by using the length command.
 ``` python
 len(stack)
 ```
 
-Empty - The Empty command returns a boolean based on whether the stack is empty or not. Python does not have a function for this, so we will have to use a if statement to accomplish this.
+Empty - The empty command returns a boolean based on whether the stack is empty or not. Python does not have a function for this, so we will have to use a if statement to accomplish this.
 ``` python
 if (len(stack) == 0)
 ```
