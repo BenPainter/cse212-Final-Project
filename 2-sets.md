@@ -3,7 +3,7 @@ Back to [Main](0-welcome.md)
 ## Introduction
 A set is a simple data structure that has the unique attribute of not allowing any duplicated items in its collection. You are able to access any element at any time, however, the order that they entered the set is not stored. Sets use a technique called hashing to store each element, which in return, allows the user of a set to be able to remove, add, and if elements inside a set with very little cost.
 
-## How To Use A Sets
+## How To Use A Set
 *The following will show how it is done in python, however, the concepts are the same for any language.
 
 Since Python has sets already built into the language, we can use that when you want to create a set. The way to create a set variable is by creating a new variable and setting it to a set.
@@ -28,7 +28,7 @@ Size - The size command returns the total number of elements in the set. Python 
 ```python
 size = len(new_set)
 ```
-## Why To Use A Sets
+## Why To Use A Set
 ### Pros
 The greatest strength that sets have is their ability to prevent any duplicates from being stored in the set. Since sets use hashing, it also makes it very efficient when you need to add or remove elements from it. 
 
@@ -36,7 +36,8 @@ The greatest strength that sets have is their ability to prevent any duplicates 
 One major downside to a set is that it does not keep track of order at all. There is no way to keep track of what element came first in the set.
 
 ## Examples
-When some people want to create change, they will start a petition. Petition usually consist of a list full of people’s names. You aren’t allow to have the same person same multiple times to inflant the numbers. Sets can help preven that issue.
+When some people want to create change, they will start a petition. A petition usually consists of a list full of people’s names. You aren’t allowed to have the same person same multiple times to inflate the numbers. Sets can help prevent that issue.
+
 ```python
 petition = set()
 answer = 0
