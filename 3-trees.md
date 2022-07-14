@@ -1,56 +1,57 @@
 # Trees
 Back to [Main](0-welcome.md)
 ## Introduction
+Trees are linked links but with a twist. Instead of having one element in front and behind it, it has one before and many elements after it. For this tutorial, we will be going over binary trees, which contain two child elements, one on the right and one on the left. A tree will start with one element and as you progress up the level on the tree, more and more elements will be there. 
+
+<img src="TreeDisplay.png" alt="Tree" width="500"/>
 
 
 ## How To Use A Tree
 *The following will show how it is done in python, however, the concepts are the same for any language.
 
+Since python does not have either Trees or Linked Lists in the base language, we will have to make it all by hand. There will be code examples in this section since all the functions will have to be created by the user.
+
+Insert - The insert function allows the user to add a new element to the tree. Depending on how the tree is set up, the element will have to travel down a branch of the tree until it has found an empty spot to be stored.
+
+Remove - The remove function allows the user to remove an element from the tree. In order to find the element, you have to climb up the branches until you reach the element that you were wanting to remove.
+
+
+Contains - The contain function allows the user to search for an element in the tree. This function returns a boolean based on whether or not the element was found.
+
+Traverse_forward/Backwards - The traverse_forward/backward function allows the returns of each element from the tree. Traveling forward through the tree will return the elements starting from the root level and traveling upwards through the tree. Traveling backward will start at the leaves and start heading downwards towards the root.
+
+Height - The height function returns height from the longest branch in the tree. It must travel every branch to find the longest one.
+
+Size - The size function returns how many elements are in the tree. This is usually stored inside the tree’s class.
+
+Empty - The empty function returns a boolean based on whether or not the tree is empty. 
+
 ## Why To Use A Tree
 ### Pros
-
+Sorts when inputted
 
 ### Cons
-
+Doesn't keep track of history
+could be imbalance
 
 ## Examples
-When some people want to create change, they will start a petition. Petition usually consist of a list full of people’s names. You aren’t allow to have the same person same multiple times to inflant the numbers. Sets can help preven that issue.
-```python
-petition = set()
-answer = 0
-
-while (answer != 3):
-    print("\n----------------------------------")
-    print("\t1. Add a name to the petition")
-    print("\t2. See list of names")
-    print("\t3. Quit")
-    answer = int(input("> "))
-
-    if (answer == 1):
-        #Add name
-        new_name = input("Enter a new name:\n")
-        petition.add(new_name.lower())
-
-    if (answer == 2):
-        #Display petition
-        count = 1
-        for name in petition:
-            print(f"{count}. {name.lower()}")
-            count += 1
-```
-
-
+Civ/Family Tree look up
 
 ## Efficiency
-Since Set uses hashing to help store its data, it makes the command functions, such as adding and removing O(1). Searching through the set for an element as well as finding the size of the set is also O(1) because of the unique attributes of hashing.
+The insert, remove, and contains functions each have an efficiency of O(log n). The reason for this is that they will only have to travel down one specific branch to achieve their task. 
+
+The traverse_forward, traverse_backwards, and height functions each have the efficiency of O(n). The reason for it being O(n) is because you are visiting every single element in the tree no matter what. The number of elements will directly impact how long it will take. 
+
+The size and empty functions have an efficiency of O(1). Size is usually stored in the class for the tree, so it is very easy to access. Empty has to check if the root of the tree is an element. It is also very cheap in processing, so it is O(1).
+
 
 ## Efficiency Chart
-![Efficiency Chart](SetEffciency.PNG)
+![Efficiency Chart](TreeEffciency.PNG)
 
 ## Try It Yourself
-The youth are always coming up with new terms and lingo that will baffle even the wisest of scholars. Mr Smith wants to be able to stay up to date with what his students are saying. He wants a program to allow his students to create a list of new terms that they use. Each student won’t know what the other student’s have submitted and Mr Smith does not want to have the same term appear multiple times. Create a program to fulfill Mr. Smith’s request.
 
-Here is a [template](2.2SETstudent_dictionary_problem.py) to start off from.
 
-Once you are done with the problem, check with the [solution](2.2SETstudent_dictionary_solution.py).
+Here is a [template]() to start off from.
+
+Once you are done with the problem, check with the [solution]().
 

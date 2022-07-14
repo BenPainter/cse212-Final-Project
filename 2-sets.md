@@ -71,7 +71,7 @@ Since Set uses hashing to help store its data, it makes the command functions, s
 ![Efficiency Chart](SetEffciency.PNG)
 
 ## Try It Yourself
-The youth are always coming up with new terms and lingo that will baffle even the wisest of scholars. Mr Smith wants to be able to stay up to date with what his students are saying. He wants a program to allow his students to create a list of new terms that they use. Each student won’t know what the other student’s have submitted and Mr Smith does not want to have the same term appear multiple times. Create a program to fulfill Mr. Smith’s request.
+The youth are always coming up with new terms and lingo that will baffle even the wisest of scholars. Mr. Smith wants to be able to stay up to date with what his students are saying. He wants a program to allow his students to create a list of new terms that they use. Each student won’t know what the other students have submitted and Mr. Smith does not want to have the same term appear multiple times. Create a program to fulfill Mr. Smith’s request.
 
 Here is a [template](2.2SETstudent_dictionary_problem.py) to start off from.
 
