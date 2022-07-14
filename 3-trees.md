@@ -38,6 +38,8 @@ could be imbalance
 Civ/Family Tree look up
 
 ## Efficiency
+*\*These efficiencies are the average efficiency for these functions if the tree is well balanced. If the tree is all on one branch, then some of these functions will be more inefficient.*
+
 The insert, remove, and contains functions each have an efficiency of O(log n). The reason for this is that they will only have to travel down one specific branch to achieve their task. 
 
 The traverse_forward, traverse_backwards, and height functions each have the efficiency of O(n). The reason for it being O(n) is because you are visiting every single element in the tree no matter what. The number of elements will directly impact how long it will take. 

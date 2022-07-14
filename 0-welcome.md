@@ -6,4 +6,4 @@
 ## Data Structures
 * [Stacks](1-stacks.md)
 * [Sets](2-sets.md)
-* Trees
+* [Trees](3-trees.md)
