@@ -3,6 +3,8 @@ Back to [Main](0-welcome.md)
 ## Introduction
 A stack is a simple data structure that has the unique attribute of only allowing the user to access the most recently added element, also known as the Last-In-First-Out order. This style of structure allows very cheap access to the last element as well as adding to the stack. However, it also has its drawbacks. The user will no longer have access to any previously added elements until the ones after it have been removed.
 
+![Efficiency Chart](pancakes.PNG)
+
 ## How To Use A Stack
 *The following will show how it is done in python, however, the concepts are the same for any language.
         
@@ -39,10 +41,10 @@ It is very hard to access an element in the middle. You would have to keep takin
 Searching through a stack is also very costly.
 
 ## Examples
-Back in the day, students would hand in their essays by placing them in a basket on the teacher’s desk. Mr. Smith misses the good ol days, and so he wants a program that simulates that basket for students to submit online. 
+Back in the day, students would hand in their essays by placing them in a basket on the teacher’s desk. Mr. Smith misses the good ol days, and so he wants a program that simulates that basket for students to submit online. So Mr. Smith wrote a program using a stack to help simulate the good ol days.
 
 ``` python
-stack = ["Bill","Eric","Jill","Rio","Ryle","Ivy","Jacob"]
+stack = ["Bill","Eric","Jill","Rio","Rylee","Ivy","Jacob"]
 answer = -1
 print ("Welcome Back Mr. Smith")
 

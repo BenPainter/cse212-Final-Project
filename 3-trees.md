@@ -1,7 +1,7 @@
 # Trees
 Back to [Main](0-welcome.md)
 ## Introduction
-Trees are linked links but with a twist. Instead of having one element in front and behind it, it has one before and many elements after it. For this tutorial, we will be going over binary trees, which contain two child elements, one on the right and one on the left. A tree will start with one element and as you progress up the level on the tree, more and more elements will be there. 
+Trees are linked links but with a twist. Instead of having one element in front and behind it, it has one before and many elements after it. For this tutorial, we will be going over binary trees, which contain two child elements, one on the right and one on the left. A tree will start with one element and as you progress up the level on the tree, more and more elements will be there. In order to move around in a tree structure, you will have to use some form of recursion.
 
 ![Tree](TreeDisplay.PNG)
 
@@ -16,7 +16,7 @@ Remove - The remove function allows the user to remove an element from the tree.
 
 Contains - The contain function allows the user to search for an element in the tree. This function returns a boolean based on whether or not the element was found.
 
-Traverse_forward/Backwards - The traverse_forward/backward function allows the returns of each element from the tree. Traveling forward through the tree will return the elements starting from the root level and traveling upwards through the tree. Traveling backward will start at the leaves and start heading downwards towards the root.
+Traverse_forward/Backwards - The traverse_forward/backward function allows the returns of each element from the tree. Traveling forward through the tree will return the elements starting from the root level and traveling upwards through the tree. Traveling backward will start at the leaves and start heading downwards towards the root. In order to travel through the tree, you have to use recursion to ensure that you have visited each element.
 
 Height - The height function returns height from the longest branch in the tree. It must travel every branch to find the longest one.
 
