@@ -1,60 +1,70 @@
-class FamilyTree:
+class Tree:
     class Node:
 
-        def __init__(self, data):
+        def __init__(self, data, price):
 
             self.data = data
-            self.mother = None
-            self.father = None
+            self.price = price
+            self.left = None
+            self.right = None
 
     def __init__(self):
         self.root = None
 
-    def insert(self, data):
+    def insert(self, data, price):
         if self.root is None:
-            self.root = FamilyTree.Node(data.lower())
+            self.root = Tree.Node(data.lower(), price)
         else:
-            self._insert(data, self.root) 
+            self._insert(data, self.root, price) 
 
-    def _insert(self, data, node):
+    def _insert(self, data, node, price):
         if data < node.data:
-            if node.mother is None:
-                node.mother = FamilyTree.Node(data.lower())
+            if node.left is None:
+                node.left = Tree.Node(data.lower(), price)
             else:
-                self._insert(data, node.mother)
+                self._insert(data, node.left, price)
         else:
-            if node.father is None:
-                node.father = FamilyTree.Node(data.lower())
+            if node.right is None:
+                node.right = Tree.Node(data.lower(), price)
             else:
-                self._insert(data, node.father)
+                self._insert(data, node.right, price)
+
+    def _contains(self, data):
+        return self.contains(data, self.root)
+
+    def contains(self, data, node):
+        if node is None:
+            return False
+        elif data == node.data:
+            return True
+        elif data < node.data:
+            return self.contains(data, node.left)
+        else:
+            return self.contains(data, node.right)
          
     def __iter__(self):
         yield from self.traverse_forward(self.root) 
         
     def traverse_forward(self, node):
         if node is not None:
-            yield node.data
-            yield from self.traverse_forward(node.mother)
-            yield from self.traverse_forward(node.father)
+            yield from self.traverse_forward(node.left)
+            yield (node.data, node.price)
+            yield from self.traverse_forward(node.right)
 
-tree = FamilyTree()
-tree.insert("3 - Mr. Smith")
-tree.insert("1 - Mrs. Smith")
-tree.insert("5 - Mr. Smith Senior")
-tree.insert("4 - Mr. Smith Senior's Mom")
-tree.insert("6 - Mr. Smith Senior's Dad")
-tree.insert("2 - Bob")
+tree = Tree()
+tree.insert("Granite", 10)
+tree.insert("Diorite", 50)
+tree.insert("Sandstone", 5)
+tree.insert("Limestone", 2)
+tree.insert("Slate", 7)
+tree.insert("Obsidian", 21)
+tree.insert("Chalk", 1)
+tree.insert("Coal", 4)
+tree.insert("Pumice", 2)
+tree.insert("Basalt", 5)
 
+print("*******************************")
+print("The list of rocks and their values")
 for x in tree:
-    print (x)
-    """
-    This should be the order when printed
-    mr. smith
-    mrs. smith
-    bob
-    mr. smith senior
-    mr. smith senior's mom
-    mr. smith senior's dad
-    """
-
+    print(x)
 

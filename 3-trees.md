@@ -125,17 +125,7 @@ The size and empty functions have an efficiency of O(1). Size is usually stored 
 ![Efficiency Chart](TreeEffciency.PNG)
 
 ## Try It Yourself
-Mr. Smith really enjoys his rock collecting tree. So much in fact that he wants to create another tree. He wants to create a simple family tree for himself. He has code already made for it, but getting his family members in the right order on the tree is too complex for this poor man. Create Mr. Smith’s family tree with the information provided down below. 
-
-```python
-"""
-		    Bob     Mr. Smith Senior’s Mom     Mr. Smith Senior’s Dad
-		     /                   \                /
-	  Mrs. Smith                     Mr. Smith Senior
-		        \                /
-			    Mr. Smith
-"""
-```
+Mr. Smith has enjoyed his new rock storing system, but it lacks a few features that he would like. He wants to be able to store the value of the rocks that he has collected so he can know the overall value of his collection. Update his tree class to allow him to add the price to the rock type.
 
 
 Here is a [template](3.2treeProblem.py) to start off from.

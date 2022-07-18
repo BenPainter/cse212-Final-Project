@@ -1,58 +1,62 @@
-class FamilyTree:
+class Tree:
     class Node:
 
         def __init__(self, data):
 
             self.data = data
-            self.mother = None
-            self.father = None
+            self.left = None
+            self.right = None
 
     def __init__(self):
         self.root = None
 
     def insert(self, data):
         if self.root is None:
-            self.root = FamilyTree.Node(data.lower())
+            self.root = Tree.Node(data.lower())
         else:
             self._insert(data, self.root) 
 
     def _insert(self, data, node):
         if data < node.data:
-            if node.mother is None:
-                node.mother = FamilyTree.Node(data.lower())
+            if node.left is None:
+                node.left = Tree.Node(data.lower())
             else:
-                self._insert(data, node.mother)
+                self._insert(data, node.left)
         else:
-            if node.father is None:
-                node.father = FamilyTree.Node(data.lower())
+            if node.right is None:
+                node.right = Tree.Node(data.lower())
             else:
-                self._insert(data, node.father)
+                self._insert(data, node.right)
+
+    def _contains(self, data):
+        return self.contains(data, self.root)
+
+    def contains(self, data, node):
+        if node is None:
+            return False
+        elif data == node.data:
+            return True
+        elif data < node.data:
+            return self.contains(data, node.left)
+        else:
+            return self.contains(data, node.right)
          
     def __iter__(self):
         yield from self.traverse_forward(self.root) 
         
     def traverse_forward(self, node):
         if node is not None:
+            yield from self.traverse_forward(node.left)
             yield node.data
-            yield from self.traverse_forward(node.mother)
-            yield from self.traverse_forward(node.father)
+            yield from self.traverse_forward(node.right)
 
-tree = FamilyTree()
-tree.insert("3 - Mr. Smith")
+tree = Tree()
 """
-Create Mr. Smith's Family Tree
-Make sure you add them in the correct order
+Add rocks and their values
 """
+
+print("*******************************")
+print("The list of rocks and their values")
 for x in tree:
-    print (x)
-    """
-    This should be the order when printed
-    mr. smith
-    mrs. smith
-    bob
-    mr. smith senior
-    mr. smith senior's mom
-    mr. smith senior's dad
-    """
-
+    print(x)
 
