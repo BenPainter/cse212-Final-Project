@@ -131,9 +131,9 @@ Mr. Smith really enjoys his rock collecting tree. So much in fact that he wants 
 """
 		    Bob     Mr. Smith Senior’s Mom     Mr. Smith Senior’s Dad
 		     /                   \                /
-	  Mrs. Smith                Mr. Smith Senior
+	  Mrs. Smith                   Mr. Smith Senior
 		        \                /
-			       Mr. Smith
+			    Mr. Smith
 """
 ```
 
